@@ -72,6 +72,7 @@ const selectTabByIndex = (tab, i) => {
     margin-bottom: 10px;
     display: flex;
     gap: 5px;
+    overflow-x: auto;
 
     .tab {
         display: inline-flex;
