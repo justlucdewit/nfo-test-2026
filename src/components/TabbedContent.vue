@@ -95,6 +95,7 @@ const selectTabByIndex = (tab, i) => {
 
         &:not(.disabled):hover {
             cursor: pointer;
+            background: #f2f2f2;
         }
 
         #suffix {
