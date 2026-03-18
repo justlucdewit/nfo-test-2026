@@ -58,12 +58,13 @@ const selectTabByIndex = (tab, i) => {
 </template>
 
 <style scoped lang="scss">
+@use '../styles/config' as *;
 
 #content {
     padding: 16px 8px;
     border-radius: 8px;
-    background: white;
-    border: #CCC;
+    background: $color-surface;
+    border: $color-border;
 }
 
 #tabs {
@@ -76,18 +77,18 @@ const selectTabByIndex = (tab, i) => {
         gap: 10px;
         padding: 16px 20px;
         border-radius: 8px;
-        background: white;
-        border: #CCC;
+        background: $color-surface;
+        border: $color-border;
         user-select: none;
 
         &.active {
-            background: #D3A9FF;
+            background: $color-tab-active;
             border: none;
         }
 
         &.disabled {
-            color: #666;
-            background: #F2F2F2;
+            color: $color-muted-text;
+            background: $color-tab-disabled-background;
         }
 
         &:not(.disabled):hover {
@@ -95,7 +96,7 @@ const selectTabByIndex = (tab, i) => {
         }
 
         #suffix {
-            color: #666;
+            color: $color-muted-text;
         }
     }
 }

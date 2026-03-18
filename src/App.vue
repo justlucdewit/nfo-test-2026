@@ -66,11 +66,12 @@ const tabs = [
 </template>
 
 <style lang="scss">
+@use './styles/config' as *;
 
 body {
 	padding: 0;
 	margin: 16px;
-	background: #E5E5E5;
+	background: $color-page-background;
 }
 
 </style>
