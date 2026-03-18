@@ -3,7 +3,6 @@ import { onBeforeUnmount, onMounted, shallowRef } from 'vue'
 
 import TabbedContent from './components/TabbedContent.vue'
 
-let activeTab = shallowRef('details')
 let certificatesNum = shallowRef(10)
 let agreementsNum = shallowRef(99)
 let interval = shallowRef(null)
@@ -18,12 +17,37 @@ onMounted(() => {
 onBeforeUnmount(() => {
 	clearInterval(interval.value)
 })
+
+const tabs = [
+    {
+        title: "Details",
+        icon: "icons/dashboard.svg"
+    },
+    {
+        title: "Assortment",
+    },
+    {
+        title: "Questionnaires",
+        icon: "icons/calendar-star.svg",
+        suffix: 32,
+    },
+    {
+        title: "Certificates",
+    },
+    {
+        title: "Agreements",
+        disabled: true
+    },
+];
+
 </script>
 
 <template>
 	<h1>Let's build some tabs!</h1>
 
-	<TabbedContent />
+	<TabbedContent
+		:tabs="tabs"
+	/>
 </template>
 
 <style lang="scss">

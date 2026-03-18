@@ -1,27 +1,12 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, defineProps } from 'vue';
 
-const tabs = ref([
-    {
-        title: "Details",
-        icon: "icons/dashboard.svg"
-    },
-    {
-        title: "Assortment",
-    },
-    {
-        title: "Questionnaires",
-        icon: "icons/calendar-star.svg",
-        suffix: 32,
-    },
-    {
-        title: "Certificates",
-    },
-    {
-        title: "Agreements",
-        disabled: true
-    },
-]);
+const props = defineProps({
+  tabs: {
+    type: Array,
+    required: true,
+  },
+})
 
 const tabSelectionIndex = ref(0);
 const tabAllignment = ref("left"); // 'right' or 'left'
@@ -44,7 +29,7 @@ const selectTabByIndex = (tab, i) => {
         <div
             class="tab"
             :class="{ active: tabSelectionIndex === i, disabled: tab?.disabled ?? false }"
-            v-for="tab, i in tabs"
+            v-for="tab, i in props.tabs"
             :key="i"
             @click="selectTabByIndex(tab, i)"
         >
