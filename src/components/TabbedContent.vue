@@ -19,11 +19,18 @@ const tabs = ref([
     },
     {
         title: "Agreements",
+        disabled: true
     },
 ]);
 
 const tabSelectionIndex = ref(0);
 const tabAllignment = ref("left"); // 'right' or 'left'
+
+// Function to select a tab unless its disabled
+const selectTabByIndex = (tab, i) => {
+    if (!tab.disabled)
+        tabSelectionIndex.value = i;
+}
 
 </script>
 
@@ -36,10 +43,10 @@ const tabAllignment = ref("left"); // 'right' or 'left'
     >
         <div
             class="tab"
-            :class="{ active: tabSelectionIndex === i }"
+            :class="{ active: tabSelectionIndex === i, disabled: tab?.disabled ?? false }"
             v-for="tab, i in tabs"
             :key="i"
-            @click="tabSelectionIndex = i"
+            @click="selectTabByIndex(tab, i)"
         >
             <!-- Tab icon -->
             <img :src="tab.icon" v-if="tab.icon" />
@@ -85,13 +92,19 @@ const tabAllignment = ref("left"); // 'right' or 'left'
         border-radius: 8px;
         background: white;
         border: #CCC;
+        user-select: none;
 
         &.active {
             background: #D3A9FF;
             border: none;
         }
 
-        &:hover {
+        &.disabled {
+            color: #666;
+            background: #F2F2F2;
+        }
+
+        &:not(.disabled):hover {
             cursor: pointer;
         }
 

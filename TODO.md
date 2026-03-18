@@ -3,7 +3,7 @@
  ✅ Tab icons
  ✅ Tab suffix
  ✅ Tab allignment
- - Tab disabled option
+ ✅ Tab disabled option
  - Passing tabs as attribute
  - Passing tab content as slots
  - Rendering tab content
