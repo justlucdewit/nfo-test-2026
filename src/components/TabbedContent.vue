@@ -3,20 +3,41 @@ import { ref } from 'vue';
 
 const tabs = ref([
     {
-        title: "First tab",
+        title: "Details",
+        icon: "icons/dashboard.svg"
     },
     {
-        title: "Second tab",
+        title: "Assortment",
     },
     {
-        title: "Third tab",
+        title: "Questionnaires",
+        icon: "icons/calendar-star.svg"
+    },
+    {
+        title: "Certificates",
+    },
+    {
+        title: "Agreements",
     },
 ]);
+
+const tabSelectionIndex = ref(0);
+
 </script>
 
 <template>
     <div id="tabs">
-        <div class="tab active" v-for="tab, i in tabs" :key="i">
+        <div
+            class="tab"
+            :class="{ active: tabSelectionIndex === i }"
+            v-for="tab, i in tabs"
+            :key="i"
+            @click="tabSelectionIndex = i"
+        >
+            <!-- Tab icon -->
+            <img :src="tab.icon" v-if="tab.icon" />
+
+            <!-- Title -->
             {{ tab.title }}
         </div>
     </div>
@@ -46,8 +67,9 @@ const tabs = ref([
     gap: 5px;
 
     .tab {
-        display: inline-block;
-        padding: 16px 8px;
+        display: inline-flex;
+        gap: 10px;
+        padding: 16px 20px;
         border-radius: 8px;
         background: white;
         border: #CCC;
