@@ -6,12 +6,13 @@
  ✅ Tab disabled option
  ✅ Passing tabs as attribute
  ✅ Passing tab content as slots
- - Dark mode
- - Dark and light mode based on system preference
- - Test on all latest browsers
- - Document what i would have wanted in thoughts.md
- - Add possible improvements too in this document
+ ✅ Dark mode
+ ✅ Dark and light mode based on system preference
  - Active + Hover state
  - Default + Hover state
  - Responsive up to 360px
  - config.scss
+ - Test on all latest browsers
+ - Document what i would have wanted in thoughts.md
+ - Add possible improvements too in this document
+

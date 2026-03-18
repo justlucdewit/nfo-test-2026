@@ -33,10 +33,12 @@ const tabs = [
     },
     {
         title: "Certificates",
+		suffix: certificatesNum.value,
     },
     {
         title: "Agreements",
-        disabled: true
+        disabled: true,
+		suffix: agreementsNum.value,
     },
 ];
 
@@ -66,12 +68,13 @@ const tabs = [
 </template>
 
 <style lang="scss">
-@use './styles/config' as *;
+@use 'config' as *;
 
 body {
 	padding: 0;
 	margin: 16px;
-	background: $color-page-background;
+	background: var(--color-page-background);
+	color: var(--color-surface-text-color);
 }
 
 </style>

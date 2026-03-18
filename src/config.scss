@@ -1,9 +1,39 @@
+// Light theme variables
+$color-page-background-light: #e5e5e5;
+$color-surface-light: #ffffff;
+$color-border-light: #cccccc;
+$color-tab-active-light: #d3a9ff;
+$color-tab-disabled-background-light: #f2f2f2;
+$color-surface-text-color-light: #000000;
+$color-muted-text-light: #666666;
 
+// Dark theme variables
+$color-page-background-dark: #000000;
+$color-surface-dark: #1a1a1a;
+$color-border-dark: #333333;
+$color-tab-active-dark: #490098;
+$color-tab-disabled-background-dark: #0d0d0d;
+$color-surface-text-color-dark: #ffffff;
+$color-muted-text-dark: #999999;
 
-// Color theme variables
-$color-page-background: #e5e5e5;
-$color-surface: #ffffff;
-$color-border: #cccccc;
-$color-tab-active: #d3a9ff;
-$color-tab-disabled-background: #f2f2f2;
-$color-muted-text: #666666;
+:root {
+	--color-page-background: #{$color-page-background-light};
+	--color-surface: #{$color-surface-light};
+	--color-border: #{$color-border-light};
+	--color-tab-active: #{$color-tab-active-light};
+	--color-tab-disabled-background: #{$color-tab-disabled-background-light};
+	--color-muted-text: #{$color-muted-text-light};
+    --color-surface-text-color: #{$color-surface-text-color-light};
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-page-background: #{$color-page-background-dark};
+		--color-surface: #{$color-surface-dark};
+		--color-border: #{$color-border-dark};
+		--color-tab-active: #{$color-tab-active-dark};
+		--color-tab-disabled-background: #{$color-tab-disabled-background-dark};
+		--color-muted-text: #{$color-muted-text-dark};
+        --color-surface-text-color: #{$color-surface-text-color-dark};
+	}
+}
