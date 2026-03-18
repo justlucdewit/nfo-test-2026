@@ -5,7 +5,7 @@
  ✅ Tab allignment
  ✅ Tab disabled option
  ✅ Passing tabs as attribute
- - Passing tab content as slots
+ ✅ Passing tab content as slots
  - Dark mode
  - Dark and light mode based on system preference
  - Test on all latest browsers

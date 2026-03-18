@@ -48,7 +48,21 @@ const tabs = [
 	<TabbedContent
 		:tabs="tabs"
 		tabAllignment="left"
-	/>
+	>
+		<template #details>
+			<h1>Details</h1>
+			<p>
+				Here is the details page. you can see detailed information within this tab
+			</p>
+		</template>
+
+		<template #assortment>
+			<h1>Assortment</h1>
+			<p>
+				The entire assortment will be listed in this tab
+			</p>
+		</template>
+	</TabbedContent>
 </template>
 
 <style lang="scss">
