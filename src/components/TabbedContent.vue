@@ -6,10 +6,13 @@ const props = defineProps({
     type: Array,
     required: true,
   },
+  tabAllignment: { // 'left' or 'right'
+    type: String,
+    required: false,
+  }
 })
 
 const tabSelectionIndex = ref(0);
-const tabAllignment = ref("left"); // 'right' or 'left'
 
 // Function to select a tab unless its disabled
 const selectTabByIndex = (tab, i) => {
@@ -23,7 +26,7 @@ const selectTabByIndex = (tab, i) => {
     <div
         id="tabs"
         :style="`justify-content: ${
-            tabAllignment == 'right' ? 'flex-end' : 'flex-start'
+            props?.tabAllignment == 'right' ? 'flex-end' : 'flex-start'
         };`"
     >
         <div

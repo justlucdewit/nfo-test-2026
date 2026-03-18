@@ -47,6 +47,7 @@ const tabs = [
 
 	<TabbedContent
 		:tabs="tabs"
+		tabAllignment="left"
 	/>
 </template>
 

@@ -4,9 +4,9 @@
  ✅ Tab suffix
  ✅ Tab allignment
  ✅ Tab disabled option
- - Passing tabs as attribute
+ ✅ Passing tabs as attribute
  - Passing tab content as slots
- - Rendering tab content
+ - Dark mode
  - Dark and light mode based on system preference
  - Test on all latest browsers
  - Document what i would have wanted in thoughts.md
