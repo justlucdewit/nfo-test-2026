@@ -11,7 +11,8 @@ const tabs = ref([
     },
     {
         title: "Questionnaires",
-        icon: "icons/calendar-star.svg"
+        icon: "icons/calendar-star.svg",
+        suffix: 32,
     },
     {
         title: "Certificates",
@@ -39,6 +40,11 @@ const tabSelectionIndex = ref(0);
 
             <!-- Title -->
             {{ tab.title }}
+
+            <!-- Suffix -->
+            <span id="suffix">
+                {{ tab.suffix }}
+            </span>
         </div>
     </div>
 
@@ -81,6 +87,10 @@ const tabSelectionIndex = ref(0);
 
         &:hover {
             cursor: pointer;
+        }
+
+        #suffix {
+            color: #666;
         }
     }
 }

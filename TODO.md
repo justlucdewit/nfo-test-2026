@@ -1,7 +1,7 @@
 # TODO
- - Tab selection
- - Tab icons
- - Tab suffix
+ ✅ Tab selection
+ ✅ Tab icons
+ ✅ Tab suffix
  - Tab allignment
  - Tab disabled option
  - Passing tabs as attribute
