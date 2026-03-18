@@ -23,11 +23,17 @@ const tabs = ref([
 ]);
 
 const tabSelectionIndex = ref(0);
+const tabAllignment = ref("left"); // 'right' or 'left'
 
 </script>
 
 <template>
-    <div id="tabs">
+    <div
+        id="tabs"
+        :style="`justify-content: ${
+            tabAllignment == 'right' ? 'flex-end' : 'flex-start'
+        };`"
+    >
         <div
             class="tab"
             :class="{ active: tabSelectionIndex === i }"
