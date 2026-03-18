@@ -5,6 +5,9 @@ $color-border-light: #cccccc;
 $color-tab-active-light: #d3a9ff;
 $color-tab-disabled-background-light: #f2f2f2;
 $color-tab-default-hover-background-light: #f2f2f2;
+$color-tab-active-hover-background-light: #9a7db9;
+$color-tab-default-hover-border-light: #999999;
+$color-tab-active-hover-border-light: #9a7db9;
 $color-surface-text-color-light: #000000;
 $color-muted-text-light: #666666;
 
@@ -15,6 +18,9 @@ $color-border-dark: #333333;
 $color-tab-active-dark: #490098;
 $color-tab-disabled-background-dark: #0d0d0d;
 $color-tab-default-hover-background-dark: #0d0d0d;
+$color-tab-active-hover-background-dark: #2a0058;
+$color-tab-default-hover-border-dark: #666666;
+$color-tab-active-hover-border-dark: #2a0058;
 $color-surface-text-color-dark: #ffffff;
 $color-muted-text-dark: #999999;
 
@@ -25,6 +31,9 @@ $color-muted-text-dark: #999999;
 	--color-tab-active: #{$color-tab-active-light};
 	--color-tab-disabled-background: #{$color-tab-disabled-background-light};
 	--color-tab-default-hover-background: #{$color-tab-default-hover-background-light};
+    --color-tab-active-hover-background: #{$color-tab-active-hover-background-light};
+    --color-tab-default-hover-border: #{$color-tab-default-hover-border-light};
+    --color-tab-active-hover-border: #{$color-tab-active-hover-border-light};
     --color-muted-text: #{$color-muted-text-light};
     --color-surface-text-color: #{$color-surface-text-color-light};
 }
@@ -37,7 +46,10 @@ $color-muted-text-dark: #999999;
 		--color-tab-active: #{$color-tab-active-dark};
 		--color-tab-disabled-background: #{$color-tab-disabled-background-dark};
         --color-tab-default-hover-background: #{$color-tab-default-hover-background-dark};
-		--color-muted-text: #{$color-muted-text-dark};
+		--color-tab-active-hover-background: #{$color-tab-active-hover-background-dark};
+        --color-tab-default-hover-border: #{$color-tab-default-hover-border-dark};
+        --color-tab-active-hover-border: #{$color-tab-active-hover-border-dark};
+        --color-muted-text: #{$color-muted-text-dark};
         --color-surface-text-color: #{$color-surface-text-color-dark};
 	}
 }

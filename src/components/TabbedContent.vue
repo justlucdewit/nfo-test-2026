@@ -83,19 +83,26 @@ const selectTabByIndex = (tab, i) => {
         border: 1px solid var(--color-border);
         user-select: none;
 
+        &:not(.disabled):hover {
+            cursor: pointer;
+            background: var(--color-tab-default-hover-background);
+            border: 1px solid var(--color-tab-default-hover-border);
+        }
+
         &.active {
             background: var(--color-tab-active);
             border: 1px solid var(--color-tab-active);
+
+            &:hover {
+                cursor: pointer;
+                background: var(--color-tab-active-hover-background);
+                border: 1px solid var(--color-tab-active-hover-border);
+            }
         }
 
         &.disabled {
             color: var(--color-muted-text);
             background: var(--color-tab-disabled-background);
-        }
-
-        &:not(.disabled):hover {
-            cursor: pointer;
-            background: #f2f2f2;
         }
 
         #suffix {
