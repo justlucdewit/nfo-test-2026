@@ -14,6 +14,6 @@
  ✅ config.scss
  ✅ Darkmode icons
  ✅ Test on all latest browsers
- - Document what i would have wanted in thoughts.md
- - Add possible improvements too in this document
+ ✅ Document what i would have wanted in thoughts.md
+ ✅ Add possible improvements too in this document
 
