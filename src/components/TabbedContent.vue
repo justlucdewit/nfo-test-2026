@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref, defineProps } from 'vue';
+import { computed, ref, defineProps, onMounted, onBeforeUnmount } from 'vue';
 
 const props = defineProps({
   tabs: {
@@ -16,12 +16,41 @@ const tabSelectionIndex = ref(0);
 const activeTabSlot = computed(() =>
     props.tabs?.[tabSelectionIndex.value]?.title?.toLowerCase()
 );
+const prefersDarkMode = ref(false);
+
+let darkModeMediaQuery;
+
+const syncDarkModePreference = (event) => {
+    prefersDarkMode.value = event.matches;
+};
+
+// On mount, set event listener to change of the prefers-color-scheme media query
+// to sync the state to a boolean variable.
+onMounted(() => {
+    darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    prefersDarkMode.value = darkModeMediaQuery.matches;
+    darkModeMediaQuery.addEventListener('change', syncDarkModePreference);
+});
+
+// on before unmount, remove the event listener.
+onBeforeUnmount(() => {
+    darkModeMediaQuery?.removeEventListener('change', syncDarkModePreference);
+});
 
 // Function to select a tab unless its disabled
 const selectTabByIndex = (tab, i) => {
     if (!tab.disabled)
         tabSelectionIndex.value = i;
 }
+
+// Function to get the public URI to the icon needed for
+// this tab, based on dark/lightmode preference
+const getTabIcon = (tab) => {
+    if (prefersDarkMode.value && tab.darkmodeIcon)
+        return tab.darkmodeIcon;
+
+    return tab.icon;
+};
 
 </script>
 
@@ -40,7 +69,7 @@ const selectTabByIndex = (tab, i) => {
             @click="selectTabByIndex(tab, i)"
         >
             <!-- Tab icon -->
-            <img :src="tab.icon" v-if="tab.icon" />
+            <img :src="getTabIcon(tab)" v-if="getTabIcon(tab)" />
 
             <!-- Title -->
             {{ tab.title }}

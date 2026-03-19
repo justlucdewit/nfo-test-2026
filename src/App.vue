@@ -21,7 +21,8 @@ onBeforeUnmount(() => {
 const tabs = [
     {
         title: "Details",
-        icon: "icons/dashboard.svg"
+        icon: "icons/dashboard.svg",
+		darkmodeIcon: "icons/dashboard-darkmode.svg",
     },
     {
         title: "Assortment",
@@ -29,6 +30,7 @@ const tabs = [
     {
         title: "Questionnaires",
         icon: "icons/calendar-star.svg",
+		darkmodeIcon: "icons/calendar-star-darkmode.svg",
         suffix: 32,
     },
     {
