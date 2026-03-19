@@ -71,6 +71,27 @@ const tabs = [
 				The entire assortment will be listed in this tab
 			</p>
 		</template>
+
+		<template #questionnaires>
+			<h1>Questionnaires</h1>
+			<p>
+				This tab contains questionnaires.
+			</p>
+		</template>
+
+		<template #certificates>
+			<h1>Certificates</h1>
+			<p>
+				This tab shows certificate data.
+			</p>
+		</template>
+
+		<template #agreements>
+			<h1>Agreements</h1>
+			<p>
+				This tab contains agreement information once the tab is enabled.
+			</p>
+		</template>
 	</TabbedContent>
 </template>
 
