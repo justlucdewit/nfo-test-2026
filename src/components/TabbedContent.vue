@@ -14,7 +14,7 @@ const props = defineProps({
 
 const tabSelectionIndex = ref(0);
 const activeTabSlot = computed(() =>
-    props.tabs?.[tabSelectionIndex.value]?.title?.toLowerCase()
+    props.tabs?.[tabSelectionIndex.value]?.id
 );
 const prefersDarkMode = ref(false);
 

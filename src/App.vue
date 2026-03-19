@@ -20,24 +20,29 @@ onBeforeUnmount(() => {
 
 const tabs = [
     {
+        id: "details",
         title: "Details",
         icon: "icons/dashboard.svg",
 		darkmodeIcon: "icons/dashboard-darkmode.svg",
     },
     {
+        id: "assortment",
         title: "Assortment",
     },
     {
+        id: "questionnaires",
         title: "Questionnaires",
         icon: "icons/calendar-star.svg",
 		darkmodeIcon: "icons/calendar-star-darkmode.svg",
         suffix: 32,
     },
     {
+        id: "certificates",
         title: "Certificates",
 		suffix: certificatesNum.value,
     },
     {
+        id: "agreements",
         title: "Agreements",
         disabled: true,
 		suffix: agreementsNum.value,
